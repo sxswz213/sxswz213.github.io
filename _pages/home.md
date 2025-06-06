@@ -9,7 +9,7 @@ permalink: /
 ### Hello👋, I'm Zhiyao!
 
 🌱I am currently pursuing a Ph.D. in Artificial Intelligence at Northwestern Polytechnical University, 
-with a research focus on **multi-agent systems** driven by large language models (LLMs) and vision-language models (VLMss).
+with a research focus on **multi-agent systems** driven by large language models (LLMs) and vision-language models (VLMs).
 I completed my undergraduate degree in Information Security at Northwestern Polytechnical University(NWPU) in June 2024. 
 
 💡I'm particularly interested in developing robust and practical AI systems capable of effectively managing diverse and dynamic scenarios. This involves enhancing the adaptability, efficiency, and reliability of AI-driven solutions to tackle complex real-world problems.
