@@ -1,17 +1,17 @@
-- name: Dr. Richard Feynman
-  photo: headshot.jpg
-  info: Richard C. Tolman Professor, California Institute of Technology
-  email: richard@university.edu
-  github: https://github.com/
-  researchgate: https://www.researchgate.net/
-  scholar: https://scholar.google.com/citations?user=B7vSqZsAAAAJ
+- name: Zhiyao Cui
+  photo: czy.jpg
+  info: Zhiyao C. Ph.D. Student in Cyber Security, Northwestern Polytechnical University
+  email: sxswz@foxmail.com
+  github: https://github.com/sxswz213
+  researchgate: https://www.researchgate.net/profile/Zhiyao-Cui
+  scholar: https://scholar.google.com/citations?user=12NhEdQAAAAJ
   cv: cv/cv.pdf
   # Change the items in "education" you have (up to 6)
   education:
     [
-      "(1942) Ph.D. Physics, Princeton University",
-      "(1939) B.S. Physics, Massachusetts Institute of Technology",
+      "(2029 expected) Ph.D. Cyber Security, Northwestern Polytechnical University",
+      "(2024) B.E. Information Security, Northwestern Polytechnical University",
     ]
 
   educationshort:
-    ["(1942) Ph.D. Physics, Princeton", "(1939) B.S. Physics, MIT"]
+    ["(2029 expected) Ph.D. Cyber Security, NWPU", "(2024) B.E. Information Security, NWPU"]

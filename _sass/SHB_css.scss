@@ -7,11 +7,15 @@ img {
     padding-bottom:7px; 
     margin-top:22px; 
     margin-bottom:22px;
+    font-size: medium;
+    background: linear-gradient(45deg, #16ff9630, #16ffcd30);
+    
+    border-color: #00bc8c;
 }
 
 .navbar {
   margin-bottom: 20px;
-  border-bottom: 4px solid var(--secondary);
+  border-bottom: 4px solid var(--light);
 }
 
 .btn {
@@ -20,13 +24,13 @@ img {
 }
 
 .container-fluid {
-  max-width: 800px;
+  max-width: 75%;
 }
 
 .container-footer {
   margin-right: auto;
   margin-left: auto;
-  max-width: 800px;
+  max-width: 75%;
   padding-left:  20px;
   padding-right: 20px;
 }
@@ -39,7 +43,7 @@ img {
   border-radius:  7px;
   min-height:     1px;
   margin-top:    15px;
-  color: black;
+  color:rgb(68, 68, 68);
   background-color: var(--gray);
   border: 2px solid var(--gray-dark);
   blockquote {

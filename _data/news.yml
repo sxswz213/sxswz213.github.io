@@ -1,6 +1,11 @@
-- date: 1 January, 1941
-  headline: "Example news here"
+- date: February, 2025
+  headline: "Our paper “Multi-LLM-Agents Debate-Performance, Efficiency, and Scaling Challenges” was accepted by the Blogpost track of ICLR 2025!"
 
-- date: 1 January, 1940
-  headline: "Example news here"
+- date: August, 2024
+  headline: "My homepage is online!"
+
+- date: May, 2024
+  headline: "Our paper “Emergence of Social Norms in Generative Agent Societies: Principles and Architecture” was accepted by the HAI track (acceptance rate: 4%) of IJCAI 2024!"
+
+
 
