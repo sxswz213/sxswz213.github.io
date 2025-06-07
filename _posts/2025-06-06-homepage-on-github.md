@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My homepage has officially gone live on github."
-date: 2024-05-31
+date: 2025-06-06
 categories: "Fun"
 ---
 
