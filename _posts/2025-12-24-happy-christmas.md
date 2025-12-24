@@ -171,7 +171,7 @@ categories: "Fun"
                 size: 0.3,                  // 增大粒子大小
                 color: 0xffcc33,            // 亮金色
                 transparent: true,
-                opacity: 0.5,               // 降低透明度使粒子更暗
+                opacity: 0.25,               // 降低透明度使粒子更暗
                 blending: THREE.AdditiveBlending, // 叠加模式，重叠处会发白发亮
                 depthWrite: false,          // 关键：防止粒子间的遮挡黑边
                 map: createMixedTexture(), // 使用混合纹理（圆形和立方形）
@@ -299,7 +299,7 @@ categories: "Fun"
                         brightness = 1.0 + (normalizedY - 0.9) * 10;
                     } else {
                         // 其余部分：保持0.7的亮度
-                        brightness = 0.7;
+                        brightness = 0.9;
                     }
                     
                     gsap.to(colorAttrib.array, {
@@ -367,7 +367,7 @@ categories: "Fun"
                 size: 0.15,   // 增大粒子大小，边缘更清晰
                 color: 0xffcc33,
                 transparent: true,
-                opacity: 0.5,  // 增加透明度
+                opacity: 0.25,  // 增加透明度
                 blending: THREE.AdditiveBlending,
                 depthWrite: false,
                 map: createMixedTexture(),
@@ -511,8 +511,8 @@ categories: "Fun"
         const style = document.createElement('style');
         style.innerHTML = `
             @keyframes twinkle {
-                0%, 100% { opacity:15; }
-                50% { opacity: 1; }
+                0%, 100% { opacity:0.25; }
+                50% { opacity: 0.25; }
             }
         `;
         document.head.appendChild(style);
