@@ -1,93 +1,145 @@
 ---
 ---
 
-
 <style>
-.btn{
-    margin-bottom:5px;
-    padding-top:0px;
-    padding-bottom:0px;
-    padding-left:15px;
-    padding-right:15px;
-    height:20px
-}
+ol.bibliography { list-style: none; padding: 0; margin: 0; }
+ol.bibliography li { padding: 0; margin: 0; }
 
-pre{
-    white-space: pre-wrap;  
-    white-space: -moz-pre-wrap; 
-    white-space: -pre-wrap; 
-    white-space: -o-pre-wrap; 
-    word-wrap: break-word; 
-    width:100%; overflow-x:auto;
+.pub-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 18px 22px 14px;
+  margin-bottom: 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+.pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
+
+.pub-title {
+  font-size: 1.05em;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.pub-title a { color: #1a1a2e; text-decoration: none; }
+.pub-title a:hover { color: #0077cc; text-decoration: underline; }
+
+.pub-badge {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-preprint  { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+.badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+.badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+
+.pub-authors { font-size: 0.88em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.85em; color: #888; margin-bottom: 10px; font-style: italic; }
+
+.pub-btns { margin-top: 6px; }
+.pub-btn {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.btn-arxiv { background: #b31b1b; color: #fff; }
+.btn-doi   { background: #4a90d9; color: #fff; }
+.btn-pdf   { background: #28a745; color: #fff; }
+.btn-bib   { background: #dc3545; color: #fff; }
+.btn-abs   { background: #e8a020; color: #fff; }
+.pub-btn:hover { opacity: 0.85; }
+
+.collapse-box {
+  display: none;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 0.82em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
 }
 </style>
 
+<div class="pub-card">
+  <div class="pub-title">
+    {% if entry.arxiv %}
+      <a href="{{ entry.arxiv }}" target="_blank">{{ entry.title }}</a>
+    {% elsif entry.url %}
+      <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+    {% elsif entry.doi %}
+      <a href="http://doi.org/{{ entry.doi }}" target="_blank">{{ entry.title }}</a>
+    {% else %}
+      {{ entry.title }}
+    {% endif %}
+    {% if entry.type == 'unpublished' %}
+      <span class="pub-badge badge-preprint">Preprint</span>
+    {% elsif entry.type == 'inproceedings' %}
+      <span class="pub-badge badge-conference">Conference</span>
+    {% elsif entry.type == 'article' %}
+      <span class="pub-badge badge-journal">Journal</span>
+    {% endif %}
+  </div>
 
-<div class="text-justify">{{reference}}</div>
+  <div class="pub-authors">{{ entry.author }}</div>
 
-<!-- You can use the below to make your name bold -->
-<!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->
+  <div class="pub-venue">
+    {% if entry.booktitle %}{{ entry.booktitle }}{% endif %}
+    {% if entry.journal %}{{ entry.journal }}{% endif %}
+    {% if entry.booktitle or entry.journal %}, {% endif %}{{ entry.year }}
+  </div>
 
-{% assign bibtest = false %}
-{% if entry.file %}
-{% assign bibfile = "/papers/" | append: entry.file %}
-{% for file in site.static_files %}
-  {% if file.path contains bibfile %}
-   {% assign bibtest = true %}
+  <div class="pub-btns">
+    {% assign bibtest = false %}
+    {% if entry.file %}
+      {% assign bibfile = "/papers/" | append: entry.file %}
+      {% for file in site.static_files %}
+        {% if file.path contains bibfile %}{% assign bibtest = true %}{% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if bibtest %}
+      <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank" class="pub-btn btn-pdf">PDF</a>
+    {% endif %}
+    {% if entry.arxiv %}
+      <a href="{{ entry.arxiv }}" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
+    {% endif %}
+    {% if entry.doi %}
+      <a href="http://doi.org/{{ entry.doi }}" target="_blank" class="pub-btn btn-doi">DOI</a>
+    {% endif %}
+    <button class="pub-btn btn-bib" onclick="toggleBib{{entry.key}}()">BIB</button>
+    {% if entry.abstract %}
+      <button class="pub-btn btn-abs" onclick="toggleAbs{{entry.key}}()">Abstract</button>
+    {% endif %}
+  </div>
+
+  <div id="bib-{{entry.key}}" class="collapse-box">{{ entry.bibtex }}</div>
+  {% if entry.abstract %}
+    <div id="abs-{{entry.key}}" class="collapse-box">{{ entry.abstract }}</div>
   {% endif %}
-{% endfor %}
-{% endif %}
-
-{% if bibtest %}
-<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm">PDF</button></a>
-{% endif %}
-
-
-{% if entry.arxiv %}
-<a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank"><button class="btn btn-primary btm-sm">ARXIV</button></a>
-{% endif %}
-{% if entry.doi %}
-<a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank"><button class="btn btn-primary btm-sm">DOI</button></a>
-{% endif %}
-
-
-{% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
-<button class="btn btn-danger btm-sm"  onclick="toggleBibtex{{entry.key}}()">BIB</button>
-{% endif %}
-
-{% if entry.abstract %}
-<button class="btn btn-warning btm-sm"  onclick="toggleAbstract{{entry.key}}()">ABSTRACT</button>
-{% endif %}
-
-{% if entry.abstract %}
-<div id="a{{entry.key}}" style="display: none; background-color:rgba(255, 255, 255, 0.712); border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex | remove: "entry.abstract" }}</pre>
-</div>
-{% else %}
-<div id="a{{entry.key}}" style="display: none; background-color:rgba(255, 255, 255, 0.712); border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{ entry.bibtex }}</pre>
-</div>
-{% endif %}
-
-<div id="b{{entry.key}}" style="display: none; background-color:rgba(255, 255, 255, 0.712); border-radius:5px; padding:10px; margin-bottom:20px;">
-<pre>{{entry.abstract}}</pre>
 </div>
 
 <script>
-function toggleBibtex{{entry.key}}(parameter) {
-    var x= document.getElementById('a{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
+function toggleBib{{entry.key}}() {
+  var x = document.getElementById('bib-{{entry.key}}');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
 }
-function toggleAbstract{{entry.key}}(parameter) {
-    var x= document.getElementById('b{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
+function toggleAbs{{entry.key}}() {
+  var x = document.getElementById('abs-{{entry.key}}');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
 }
 </script>

@@ -27,3 +27,9 @@ I completed my undergraduate degree in Information Security at Northwestern Poly
 </div>
 <br/>
 
+---
+
+### Publications
+
+{% bibliography %}
+
