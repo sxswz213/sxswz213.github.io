@@ -112,7 +112,14 @@ ol.bibliography li { padding: 0; margin: 0; }
 
 <div class="pub-card">
   <div class="pub-img-wrap">
+    {% assign imgtest = false %}
     {% if entry.image %}
+      {% assign imgpath = "/images/papers/" | append: entry.image %}
+      {% for file in site.static_files %}
+        {% if file.path == imgpath %}{% assign imgtest = true %}{% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if imgtest %}
       <img src="{{ site.url }}{{ site.baseurl }}/images/papers/{{ entry.image }}" alt="{{ entry.title }}" />
     {% else %}
       <div class="pub-img-placeholder">No image</div>
