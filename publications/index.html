@@ -81,9 +81,11 @@ ol.bibliography { list-style: none; padding: 0; margin: 0; }
 ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-card {
+  display: flex;
+  gap: 18px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 18px 22px 14px;
+  padding: 16px 20px;
   margin-bottom: 16px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
@@ -91,8 +93,35 @@ ol.bibliography li { padding: 0; margin: 0; }
 }
 .pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
 
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
 .pub-title {
-  font-size: 1.05em;
+  font-size: 1.02em;
   font-weight: 700;
   margin-bottom: 6px;
   line-height: 1.4;
@@ -102,7 +131,7 @@ ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-badge {
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 0.68em;
   font-weight: 600;
   padding: 2px 7px;
   border-radius: 4px;
@@ -113,13 +142,12 @@ ol.bibliography li { padding: 0; margin: 0; }
 .badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
 .badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
 
-.pub-authors { font-size: 0.88em; color: #555; margin-bottom: 4px; }
-.pub-venue   { font-size: 0.85em; color: #888; margin-bottom: 10px; font-style: italic; }
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
 
-.pub-btns { margin-top: 6px; }
 .pub-btn {
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 0.73em;
   font-weight: 600;
   padding: 3px 11px;
   border-radius: 4px;
@@ -149,44 +177,59 @@ ol.bibliography li { padding: 0; margin: 0; }
   word-wrap: break-word;
   line-height: 1.5;
 }
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
 </style>
 
 <div class="pub-card">
-  <div class="pub-title">
+  <div class="pub-img-wrap">
     
-      Design First, Code Later: Aesthetically Pleasing Template-Free Slides Generation
-    
-    
-      <span class="pub-badge badge-conference">Conference</span>
+      <img src="https://sxswz213.github.io/images/papers/designfirst.png" alt="Design First, Code Later: Aesthetically Pleasing Template-Free Slides Generation" />
     
   </div>
 
-  <div class="pub-authors">Cui, Zhiyao and Wang, Chenxu and Hu, Shuyue and Zhang, Yiqun and Shao, Wenqi and Zhang, Qiaosheng and Wang, Zhen</div>
+  <div class="pub-body">
+    <div class="pub-title">
+      
+        Design First, Code Later: Aesthetically Pleasing Template-Free Slides Generation
+      
+      
+        <span class="pub-badge badge-conference">Conference</span>
+      
+    </div>
 
-  <div class="pub-venue">
-    Findings of the Association for Computational Linguistics: ACL 2026
-    
-    , 2026
-  </div>
+    <div class="pub-authors">Cui, Zhiyao and Wang, Chenxu and Hu, Shuyue and Zhang, Yiqun and Shao, Wenqi and Zhang, Qiaosheng and Wang, Zhen</div>
 
-  <div class="pub-btns">
-    
-    
-    
-    
-    
-    <button class="pub-btn btn-bib" onclick="toggleBibcui2026design()">BIB</button>
-    
-  </div>
+    <div class="pub-venue">
+      Findings of the Association for Computational Linguistics: ACL 2026
+      
+      , 2026
+    </div>
 
-  <div id="bib-cui2026design" class="collapse-box">@inproceedings{cui2026design,
+    <div>
+      
+      
+      
+      
+      
+      <button class="pub-btn btn-bib" onclick="toggleBibcui2026design()">BIB</button>
+      
+    </div>
+
+    <div id="bib-cui2026design" class="collapse-box">@inproceedings{cui2026design,
   title = {Design First, Code Later: Aesthetically Pleasing Template-Free Slides Generation},
   author = {Cui, Zhiyao and Wang, Chenxu and Hu, Shuyue and Zhang, Yiqun and Shao, Wenqi and Zhang, Qiaosheng and Wang, Zhen},
   booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
-  year = {2026}
+  year = {2026},
+  image = {designfirst.png}
 }
 </div>
-  
+    
+  </div>
 </div>
 
 <script>
@@ -205,9 +248,11 @@ ol.bibliography { list-style: none; padding: 0; margin: 0; }
 ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-card {
+  display: flex;
+  gap: 18px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 18px 22px 14px;
+  padding: 16px 20px;
   margin-bottom: 16px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
@@ -215,8 +260,35 @@ ol.bibliography li { padding: 0; margin: 0; }
 }
 .pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
 
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
 .pub-title {
-  font-size: 1.05em;
+  font-size: 1.02em;
   font-weight: 700;
   margin-bottom: 6px;
   line-height: 1.4;
@@ -226,7 +298,7 @@ ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-badge {
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 0.68em;
   font-weight: 600;
   padding: 2px 7px;
   border-radius: 4px;
@@ -237,13 +309,12 @@ ol.bibliography li { padding: 0; margin: 0; }
 .badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
 .badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
 
-.pub-authors { font-size: 0.88em; color: #555; margin-bottom: 4px; }
-.pub-venue   { font-size: 0.85em; color: #888; margin-bottom: 10px; font-style: italic; }
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
 
-.pub-btns { margin-top: 6px; }
 .pub-btn {
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 0.73em;
   font-weight: 600;
   padding: 3px 11px;
   border-radius: 4px;
@@ -273,53 +344,68 @@ ol.bibliography li { padding: 0; margin: 0; }
   word-wrap: break-word;
   line-height: 1.5;
 }
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
 </style>
 
 <div class="pub-card">
-  <div class="pub-title">
+  <div class="pub-img-wrap">
     
-      <a href="https://arxiv.org/abs/2502.08788" target="_blank">If Multi-Agent Debate is the Answer, What is the Question?</a>
-    
-    
-      <span class="pub-badge badge-preprint">Preprint</span>
+      <img src="https://sxswz213.github.io/images/papers/mad.png" alt="If Multi-Agent Debate is the Answer, What is the Question?" />
     
   </div>
 
-  <div class="pub-authors">Zhang, Hangfan and Cui, Zhiyao and Wang, Xinrun and Zhang, Qiaosheng and Wang, Zhen and Wu, Dinghao and Hu, Shuyue</div>
+  <div class="pub-body">
+    <div class="pub-title">
+      
+        <a href="https://arxiv.org/abs/2502.08788" target="_blank">If Multi-Agent Debate is the Answer, What is the Question?</a>
+      
+      
+        <span class="pub-badge badge-preprint">Preprint</span>
+      
+    </div>
 
-  <div class="pub-venue">
-    
-    
-    2025
-  </div>
+    <div class="pub-authors">Zhang, Hangfan and Cui, Zhiyao and Wang, Xinrun and Zhang, Qiaosheng and Wang, Zhen and Wu, Dinghao and Hu, Shuyue</div>
 
-  <div class="pub-btns">
-    
-    
-    
-    
-      <a href="https://arxiv.org/abs/2502.08788" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
-    
-    
-    <button class="pub-btn btn-bib" onclick="toggleBibzhang2025multiagentdebateanswerquestion()">BIB</button>
-    
-      <button class="pub-btn btn-abs" onclick="toggleAbszhang2025multiagentdebateanswerquestion()">Abstract</button>
-    
-  </div>
+    <div class="pub-venue">
+      
+      
+      2025
+    </div>
 
-  <div id="bib-zhang2025multiagentdebateanswerquestion" class="collapse-box">@unpublished{zhang2025multiagentdebateanswerquestion,
+    <div>
+      
+      
+      
+      
+        <a href="https://arxiv.org/abs/2502.08788" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
+      
+      
+      <button class="pub-btn btn-bib" onclick="toggleBibzhang2025multiagentdebateanswerquestion()">BIB</button>
+      
+        <button class="pub-btn btn-abs" onclick="toggleAbszhang2025multiagentdebateanswerquestion()">Abstract</button>
+      
+    </div>
+
+    <div id="bib-zhang2025multiagentdebateanswerquestion" class="collapse-box">@unpublished{zhang2025multiagentdebateanswerquestion,
   title = {If Multi-Agent Debate is the Answer, What is the Question?},
   author = {Zhang, Hangfan and Cui, Zhiyao and Wang, Xinrun and Zhang, Qiaosheng and Wang, Zhen and Wu, Dinghao and Hu, Shuyue},
   year = {2025},
   eprint = {2502.08788},
   archiveprefix = {arXiv},
   primaryclass = {cs.CL},
-  arxiv = {https://arxiv.org/abs/2502.08788}
+  arxiv = {https://arxiv.org/abs/2502.08788},
+  image = {mad.png}
 }
 </div>
-  
-    <div id="abs-zhang2025multiagentdebateanswerquestion" class="collapse-box">Multi-agent debate (MAD) has emerged as a promising approach to enhance the factual accuracy and reasoning quality of large language models (LLMs) by engaging multiple agents in iterative discussions during inference. Despite its potential, we argue that current MAD research suffers from critical shortcomings in evaluation practices, including limited dataset overlap and inconsistent baselines, raising significant concerns about generalizability. Correspondingly, this paper presents a systematic evaluation of five representative MAD methods across nine benchmarks using four foundational models. Surprisingly, our findings reveal that MAD methods fail to reliably outperform simple single-agent baselines such as Chain-of-Thought and Self-Consistency, even when consuming additional inference-time computation. From our analysis, we found that model heterogeneity can significantly improve MAD frameworks. We propose Heter-MAD enabling a single LLM agent to access the output from heterogeneous foundation models, which boosts the performance of current MAD frameworks. Finally, we outline potential directions for advancing MAD, aiming to spark a broader conversation and inspire future work in this area.</div>
-  
+    
+      <div id="abs-zhang2025multiagentdebateanswerquestion" class="collapse-box">Multi-agent debate (MAD) has emerged as a promising approach to enhance the factual accuracy and reasoning quality of large language models (LLMs) by engaging multiple agents in iterative discussions during inference. Despite its potential, we argue that current MAD research suffers from critical shortcomings in evaluation practices, including limited dataset overlap and inconsistent baselines, raising significant concerns about generalizability. Correspondingly, this paper presents a systematic evaluation of five representative MAD methods across nine benchmarks using four foundational models. Surprisingly, our findings reveal that MAD methods fail to reliably outperform simple single-agent baselines such as Chain-of-Thought and Self-Consistency, even when consuming additional inference-time computation. From our analysis, we found that model heterogeneity can significantly improve MAD frameworks. We propose Heter-MAD enabling a single LLM agent to access the output from heterogeneous foundation models, which boosts the performance of current MAD frameworks. Finally, we outline potential directions for advancing MAD, aiming to spark a broader conversation and inspire future work in this area.</div>
+    
+  </div>
 </div>
 
 <script>
@@ -338,9 +424,11 @@ ol.bibliography { list-style: none; padding: 0; margin: 0; }
 ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-card {
+  display: flex;
+  gap: 18px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 18px 22px 14px;
+  padding: 16px 20px;
   margin-bottom: 16px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
@@ -348,8 +436,35 @@ ol.bibliography li { padding: 0; margin: 0; }
 }
 .pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
 
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
 .pub-title {
-  font-size: 1.05em;
+  font-size: 1.02em;
   font-weight: 700;
   margin-bottom: 6px;
   line-height: 1.4;
@@ -359,7 +474,7 @@ ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-badge {
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 0.68em;
   font-weight: 600;
   padding: 2px 7px;
   border-radius: 4px;
@@ -370,13 +485,12 @@ ol.bibliography li { padding: 0; margin: 0; }
 .badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
 .badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
 
-.pub-authors { font-size: 0.88em; color: #555; margin-bottom: 4px; }
-.pub-venue   { font-size: 0.85em; color: #888; margin-bottom: 10px; font-style: italic; }
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
 
-.pub-btns { margin-top: 6px; }
 .pub-btn {
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 0.73em;
   font-weight: 600;
   padding: 3px 11px;
   border-radius: 4px;
@@ -406,53 +520,68 @@ ol.bibliography li { padding: 0; margin: 0; }
   word-wrap: break-word;
   line-height: 1.5;
 }
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
 </style>
 
 <div class="pub-card">
-  <div class="pub-title">
+  <div class="pub-img-wrap">
     
-      <a href="https://arxiv.org/abs/2508.18040" target="_blank">PerPilot: Personalizing VLM-based Mobile Agents via Memory and Exploration</a>
-    
-    
-      <span class="pub-badge badge-preprint">Preprint</span>
+      <img src="https://sxswz213.github.io/images/papers/perpilot.png" alt="PerPilot: Personalizing VLM-based Mobile Agents via Memory and Exploration" />
     
   </div>
 
-  <div class="pub-authors">Wang, Xin and Cui, Zhiyao and Li, Hao and Zeng, Ya and Wang, Chenxu and Song, Ruiqi and Chen, Yihang and Shao, Kun and Zhang, Qiaosheng and Liu, Jinzhuo and Ren, Siyue and Hu, Shuyue and Wang, Zhen</div>
+  <div class="pub-body">
+    <div class="pub-title">
+      
+        <a href="https://arxiv.org/abs/2508.18040" target="_blank">PerPilot: Personalizing VLM-based Mobile Agents via Memory and Exploration</a>
+      
+      
+        <span class="pub-badge badge-preprint">Preprint</span>
+      
+    </div>
 
-  <div class="pub-venue">
-    
-    
-    2025
-  </div>
+    <div class="pub-authors">Wang, Xin and Cui, Zhiyao and Li, Hao and Zeng, Ya and Wang, Chenxu and Song, Ruiqi and Chen, Yihang and Shao, Kun and Zhang, Qiaosheng and Liu, Jinzhuo and Ren, Siyue and Hu, Shuyue and Wang, Zhen</div>
 
-  <div class="pub-btns">
-    
-    
-    
-    
-      <a href="https://arxiv.org/abs/2508.18040" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
-    
-    
-    <button class="pub-btn btn-bib" onclick="toggleBibwang2025perpilotpersonalizingvlmbasedmobile()">BIB</button>
-    
-      <button class="pub-btn btn-abs" onclick="toggleAbswang2025perpilotpersonalizingvlmbasedmobile()">Abstract</button>
-    
-  </div>
+    <div class="pub-venue">
+      
+      
+      2025
+    </div>
 
-  <div id="bib-wang2025perpilotpersonalizingvlmbasedmobile" class="collapse-box">@unpublished{wang2025perpilotpersonalizingvlmbasedmobile,
+    <div>
+      
+      
+      
+      
+        <a href="https://arxiv.org/abs/2508.18040" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
+      
+      
+      <button class="pub-btn btn-bib" onclick="toggleBibwang2025perpilotpersonalizingvlmbasedmobile()">BIB</button>
+      
+        <button class="pub-btn btn-abs" onclick="toggleAbswang2025perpilotpersonalizingvlmbasedmobile()">Abstract</button>
+      
+    </div>
+
+    <div id="bib-wang2025perpilotpersonalizingvlmbasedmobile" class="collapse-box">@unpublished{wang2025perpilotpersonalizingvlmbasedmobile,
   title = {PerPilot: Personalizing VLM-based Mobile Agents via Memory and Exploration},
   author = {Wang, Xin and Cui, Zhiyao and Li, Hao and Zeng, Ya and Wang, Chenxu and Song, Ruiqi and Chen, Yihang and Shao, Kun and Zhang, Qiaosheng and Liu, Jinzhuo and Ren, Siyue and Hu, Shuyue and Wang, Zhen},
   year = {2025},
   eprint = {2508.18040},
   archiveprefix = {arXiv},
   primaryclass = {cs.AI},
-  arxiv = {https://arxiv.org/abs/2508.18040}
+  arxiv = {https://arxiv.org/abs/2508.18040},
+  image = {perpilot.png}
 }
 </div>
-  
-    <div id="abs-wang2025perpilotpersonalizingvlmbasedmobile" class="collapse-box">Vision language model (VLM)-based mobile agents show great potential for assisting users in performing instruction-driven tasks. However, these agents typically struggle with personalized instructions – those containing ambiguous, user-specific context – a challenge that has been largely overlooked in previous research. In this paper, we define personalized instructions and introduce PerInstruct, a novel human-annotated dataset covering diverse personalized instructions across various mobile scenarios. Furthermore, given the limited personalization capabilities of existing mobile agents, we propose PerPilot, a plug-and-play framework powered by large language models (LLMs) that enables mobile agents to autonomously perceive, understand, and execute personalized user instructions. PerPilot identifies personalized elements and autonomously completes instructions via two complementary approaches: memory-based retrieval and reasoning-based exploration. Experimental results demonstrate that PerPilot effectively handles personalized tasks with minimal user intervention and progressively improves its performance with continued use, underscoring the importance of personalization-aware reasoning for next-generation mobile agents.</div>
-  
+    
+      <div id="abs-wang2025perpilotpersonalizingvlmbasedmobile" class="collapse-box">Vision language model (VLM)-based mobile agents show great potential for assisting users in performing instruction-driven tasks. However, these agents typically struggle with personalized instructions – those containing ambiguous, user-specific context – a challenge that has been largely overlooked in previous research. In this paper, we define personalized instructions and introduce PerInstruct, a novel human-annotated dataset covering diverse personalized instructions across various mobile scenarios. Furthermore, given the limited personalization capabilities of existing mobile agents, we propose PerPilot, a plug-and-play framework powered by large language models (LLMs) that enables mobile agents to autonomously perceive, understand, and execute personalized user instructions. PerPilot identifies personalized elements and autonomously completes instructions via two complementary approaches: memory-based retrieval and reasoning-based exploration. Experimental results demonstrate that PerPilot effectively handles personalized tasks with minimal user intervention and progressively improves its performance with continued use, underscoring the importance of personalization-aware reasoning for next-generation mobile agents.</div>
+    
+  </div>
 </div>
 
 <script>
@@ -471,9 +600,11 @@ ol.bibliography { list-style: none; padding: 0; margin: 0; }
 ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-card {
+  display: flex;
+  gap: 18px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 18px 22px 14px;
+  padding: 16px 20px;
   margin-bottom: 16px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
@@ -481,8 +612,35 @@ ol.bibliography li { padding: 0; margin: 0; }
 }
 .pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
 
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
 .pub-title {
-  font-size: 1.05em;
+  font-size: 1.02em;
   font-weight: 700;
   margin-bottom: 6px;
   line-height: 1.4;
@@ -492,7 +650,7 @@ ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-badge {
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 0.68em;
   font-weight: 600;
   padding: 2px 7px;
   border-radius: 4px;
@@ -503,13 +661,12 @@ ol.bibliography li { padding: 0; margin: 0; }
 .badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
 .badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
 
-.pub-authors { font-size: 0.88em; color: #555; margin-bottom: 4px; }
-.pub-venue   { font-size: 0.85em; color: #888; margin-bottom: 10px; font-style: italic; }
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
 
-.pub-btns { margin-top: 6px; }
 .pub-btn {
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 0.73em;
   font-weight: 600;
   padding: 3px 11px;
   border-radius: 4px;
@@ -539,44 +696,57 @@ ol.bibliography li { padding: 0; margin: 0; }
   word-wrap: break-word;
   line-height: 1.5;
 }
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
 </style>
 
 <div class="pub-card">
-  <div class="pub-title">
+  <div class="pub-img-wrap">
     
-      <a href="https://arxiv.org/abs/2403.08251" target="_blank">Emergence of Social Norms in Generative Agent Societies: Principles and Architecture</a>
-    
-    
-      <span class="pub-badge badge-conference">Conference</span>
+      <img src="https://sxswz213.github.io/images/papers/crsec.png" alt="Emergence of Social Norms in Generative Agent Societies: Principles and Architecture" />
     
   </div>
 
-  <div class="pub-authors">Ren, Siyue and Cui, Zhiyao and Song, Ruiqi and Wang, Zhen and Hu, Shuyue</div>
+  <div class="pub-body">
+    <div class="pub-title">
+      
+        <a href="https://arxiv.org/abs/2403.08251" target="_blank">Emergence of Social Norms in Generative Agent Societies: Principles and Architecture</a>
+      
+      
+        <span class="pub-badge badge-conference">Conference</span>
+      
+    </div>
 
-  <div class="pub-venue">
-    Proceedings of the Thirty-Third International Joint Conference on
+    <div class="pub-authors">Ren, Siyue and Cui, Zhiyao and Song, Ruiqi and Wang, Zhen and Hu, Shuyue</div>
+
+    <div class="pub-venue">
+      Proceedings of the Thirty-Third International Joint Conference on
                Artificial Intelligence, IJCAI-24
-    
-    , 2024
-  </div>
+      
+      , 2024
+    </div>
 
-  <div class="pub-btns">
-    
-    
-    
-    
-      <a href="https://arxiv.org/abs/2403.08251" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
-    
-    
-      <a href="http://doi.org/10.24963/ijcai.2024/874" target="_blank" class="pub-btn btn-doi">DOI</a>
-    
-    <button class="pub-btn btn-bib" onclick="toggleBibijcai2024p0874()">BIB</button>
-    
-      <button class="pub-btn btn-abs" onclick="toggleAbsijcai2024p0874()">Abstract</button>
-    
-  </div>
+    <div>
+      
+      
+      
+      
+        <a href="https://arxiv.org/abs/2403.08251" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
+      
+      
+        <a href="http://doi.org/10.24963/ijcai.2024/874" target="_blank" class="pub-btn btn-doi">DOI</a>
+      
+      <button class="pub-btn btn-bib" onclick="toggleBibijcai2024p0874()">BIB</button>
+      
+        <button class="pub-btn btn-abs" onclick="toggleAbsijcai2024p0874()">Abstract</button>
+      
+    </div>
 
-  <div id="bib-ijcai2024p0874" class="collapse-box">@inproceedings{ijcai2024p0874,
+    <div id="bib-ijcai2024p0874" class="collapse-box">@inproceedings{ijcai2024p0874,
   title = {Emergence of Social Norms in Generative Agent Societies: Principles and Architecture},
   author = {Ren, Siyue and Cui, Zhiyao and Song, Ruiqi and Wang, Zhen and Hu, Shuyue},
   booktitle = {Proceedings of the Thirty-Third International Joint Conference on
@@ -589,12 +759,14 @@ ol.bibliography li { padding: 0; margin: 0; }
   note = {Human-Centred AI},
   doi = {10.24963/ijcai.2024/874},
   url = {https://doi.org/10.24963/ijcai.2024/874},
-  arxiv = {https://arxiv.org/abs/2403.08251}
+  arxiv = {https://arxiv.org/abs/2403.08251},
+  image = {crsec.png}
 }
 </div>
-  
-    <div id="abs-ijcai2024p0874" class="collapse-box">Social norms play a crucial role in guiding agents towards understanding and adhering to standards of behavior, thus reducing social conflicts within multi-agent systems (MASs). However, current LLM-based (or generative) MASs lack the capability to be normative. In this paper, we propose a novel architecture, named CRSEC, to empower the emergence of social norms within generative MASs. Our architecture consists of four modules: Creation &amp; Representation, Spreading, Evaluation, and Compliance. This addresses several important aspects of the emergent processes all in one: (i) where social norms come from, (ii) how they are formally represented, (iii) how they spread through agents’ communications and observations, (iv) how they are examined with a sanity check and synthesized in the long term, and (v) how they are incorporated into agents’ planning and actions. Our experiments deployed in the Smallville sandbox game environment demonstrate the capability of our architecture to establish social norms and reduce social conflicts within generative MASs. The positive outcomes of our human evaluation, conducted with 30 evaluators, further affirm the effectiveness of our approach. Our project can be accessed via the following link: https://github.com/sxswz213/CRSEC.</div>
-  
+    
+      <div id="abs-ijcai2024p0874" class="collapse-box">Social norms play a crucial role in guiding agents towards understanding and adhering to standards of behavior, thus reducing social conflicts within multi-agent systems (MASs). However, current LLM-based (or generative) MASs lack the capability to be normative. In this paper, we propose a novel architecture, named CRSEC, to empower the emergence of social norms within generative MASs. Our architecture consists of four modules: Creation &amp; Representation, Spreading, Evaluation, and Compliance. This addresses several important aspects of the emergent processes all in one: (i) where social norms come from, (ii) how they are formally represented, (iii) how they spread through agents’ communications and observations, (iv) how they are examined with a sanity check and synthesized in the long term, and (v) how they are incorporated into agents’ planning and actions. Our experiments deployed in the Smallville sandbox game environment demonstrate the capability of our architecture to establish social norms and reduce social conflicts within generative MASs. The positive outcomes of our human evaluation, conducted with 30 evaluators, further affirm the effectiveness of our approach. Our project can be accessed via the following link: https://github.com/sxswz213/CRSEC.</div>
+    
+  </div>
 </div>
 
 <script>
@@ -613,9 +785,11 @@ ol.bibliography { list-style: none; padding: 0; margin: 0; }
 ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-card {
+  display: flex;
+  gap: 18px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 18px 22px 14px;
+  padding: 16px 20px;
   margin-bottom: 16px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
@@ -623,8 +797,35 @@ ol.bibliography li { padding: 0; margin: 0; }
 }
 .pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
 
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
 .pub-title {
-  font-size: 1.05em;
+  font-size: 1.02em;
   font-weight: 700;
   margin-bottom: 6px;
   line-height: 1.4;
@@ -634,7 +835,7 @@ ol.bibliography li { padding: 0; margin: 0; }
 
 .pub-badge {
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 0.68em;
   font-weight: 600;
   padding: 2px 7px;
   border-radius: 4px;
@@ -645,13 +846,12 @@ ol.bibliography li { padding: 0; margin: 0; }
 .badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
 .badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
 
-.pub-authors { font-size: 0.88em; color: #555; margin-bottom: 4px; }
-.pub-venue   { font-size: 0.85em; color: #888; margin-bottom: 10px; font-style: italic; }
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
 
-.pub-btns { margin-top: 6px; }
 .pub-btn {
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 0.73em;
   font-weight: 600;
   padding: 3px 11px;
   border-radius: 4px;
@@ -681,41 +881,54 @@ ol.bibliography li { padding: 0; margin: 0; }
   word-wrap: break-word;
   line-height: 1.5;
 }
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
 </style>
 
 <div class="pub-card">
-  <div class="pub-title">
+  <div class="pub-img-wrap">
     
-      <a href="https://www.sciencedirect.com/science/article/pii/S138376212300053X" target="_blank">TBVPAKE: An efficient and provably secure verifier-based PAKE protocol for IoT applications</a>
-    
-    
-      <span class="pub-badge badge-journal">Journal</span>
+      <img src="https://sxswz213.github.io/images/papers/tbvpake.png" alt="TBVPAKE: An efficient and provably secure verifier-based PAKE protocol for IoT applications" />
     
   </div>
 
-  <div class="pub-authors">Qi, Mingping and Cui, Zhiyao and Liang, Gaowei</div>
+  <div class="pub-body">
+    <div class="pub-title">
+      
+        <a href="https://www.sciencedirect.com/science/article/pii/S138376212300053X" target="_blank">TBVPAKE: An efficient and provably secure verifier-based PAKE protocol for IoT applications</a>
+      
+      
+        <span class="pub-badge badge-journal">Journal</span>
+      
+    </div>
 
-  <div class="pub-venue">
-    
-    Journal of Systems Architecture
-    , 2023
-  </div>
+    <div class="pub-authors">Qi, Mingping and Cui, Zhiyao and Liang, Gaowei</div>
 
-  <div class="pub-btns">
-    
-    
-    
-    
-    
-      <a href="http://doi.org/https://doi.org/10.1016/j.sysarc.2023.102874" target="_blank" class="pub-btn btn-doi">DOI</a>
-    
-    <button class="pub-btn btn-bib" onclick="toggleBibQI2023102874()">BIB</button>
-    
-      <button class="pub-btn btn-abs" onclick="toggleAbsQI2023102874()">Abstract</button>
-    
-  </div>
+    <div class="pub-venue">
+      
+      Journal of Systems Architecture
+      , 2023
+    </div>
 
-  <div id="bib-QI2023102874" class="collapse-box">@article{QI2023102874,
+    <div>
+      
+      
+      
+      
+      
+        <a href="http://doi.org/https://doi.org/10.1016/j.sysarc.2023.102874" target="_blank" class="pub-btn btn-doi">DOI</a>
+      
+      <button class="pub-btn btn-bib" onclick="toggleBibQI2023102874()">BIB</button>
+      
+        <button class="pub-btn btn-abs" onclick="toggleAbsQI2023102874()">Abstract</button>
+      
+    </div>
+
+    <div id="bib-QI2023102874" class="collapse-box">@article{QI2023102874,
   title = {TBVPAKE: An efficient and provably secure verifier-based PAKE protocol for IoT applications},
   journal = {Journal of Systems Architecture},
   volume = {139},
@@ -725,12 +938,14 @@ ol.bibliography li { padding: 0; margin: 0; }
   doi = {https://doi.org/10.1016/j.sysarc.2023.102874},
   url = {https://www.sciencedirect.com/science/article/pii/S138376212300053X},
   author = {Qi, Mingping and Cui, Zhiyao and Liang, Gaowei},
+  image = {tbvpake.png},
   keywords = {Password-authenticated key exchange, PAKE, Provably secure, IoT}
 }
 </div>
-  
-    <div id="abs-QI2023102874" class="collapse-box">Password-authenticated key exchange (PAKE) is an important cryptographic primitive by which two parties are allowed to authenticate each other and establish a cryptographically strong key using a low-entropy password over an insecure channel. Therefore, it is suitable for access control and securing communications between low-cost Internet of Things (IoT) devices where sound security mechanism is difficult to be applied. This paper makes a contribution to securing IoT applications by presenting a secure, efficient and easy-to-implement verifier-based PAKE protocol, named as TBVPAKE (short for Two-Basis Verifier-based PAKE). It is secure against the off-line dictionary attack and server compromise attack, and supports the perfect forward secrecy. Under the widely accepted BPR security model, TBVPAKE is formally proved in this paper in the random oracle model by reducing its security to the Computational Diffie–Hellman (CDH) and Simultaneous Diffie–Hellman (SDH) security assumptions. In addition, we compare the new TBVPAKE with some other outstanding verifier-based PAKE protocols by instantiating them over a commonly used elliptic curve group, and the comparative analysis results definitely show that the new TBVPAKE offers better computational efficiency and ease of implementation. Therefore, the new TBVPAKE might be a better choice for securing IoT applications.</div>
-  
+    
+      <div id="abs-QI2023102874" class="collapse-box">Password-authenticated key exchange (PAKE) is an important cryptographic primitive by which two parties are allowed to authenticate each other and establish a cryptographically strong key using a low-entropy password over an insecure channel. Therefore, it is suitable for access control and securing communications between low-cost Internet of Things (IoT) devices where sound security mechanism is difficult to be applied. This paper makes a contribution to securing IoT applications by presenting a secure, efficient and easy-to-implement verifier-based PAKE protocol, named as TBVPAKE (short for Two-Basis Verifier-based PAKE). It is secure against the off-line dictionary attack and server compromise attack, and supports the perfect forward secrecy. Under the widely accepted BPR security model, TBVPAKE is formally proved in this paper in the random oracle model by reducing its security to the Computational Diffie–Hellman (CDH) and Simultaneous Diffie–Hellman (SDH) security assumptions. In addition, we compare the new TBVPAKE with some other outstanding verifier-based PAKE protocols by instantiating them over a commonly used elliptic curve group, and the comparative analysis results definitely show that the new TBVPAKE offers better computational efficiency and ease of implementation. Therefore, the new TBVPAKE might be a better choice for securing IoT applications.</div>
+    
+  </div>
 </div>
 
 <script>
