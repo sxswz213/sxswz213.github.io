@@ -12,41 +12,47 @@
   doi       = {10.24963/ijcai.2024/874},
   url       = {https://doi.org/10.24963/ijcai.2024/874},
   arxiv     = {https://arxiv.org/abs/2403.08251},
+  image     = {crsec.png},
   abstract  = {Social norms play a crucial role in guiding agents towards understanding and adhering to standards of behavior, thus reducing social conflicts within multi-agent systems (MASs). However, current LLM-based (or generative) MASs lack the capability to be normative. In this paper, we propose a novel architecture, named CRSEC, to empower the emergence of social norms within generative MASs. Our architecture consists of four modules: Creation & Representation, Spreading, Evaluation, and Compliance. This addresses several important aspects of the emergent processes all in one: (i) where social norms come from, (ii) how they are formally represented, (iii) how they spread through agents' communications and observations, (iv) how they are examined with a sanity check and synthesized in the long term, and (v) how they are incorporated into agents' planning and actions. Our experiments deployed in the Smallville sandbox game environment demonstrate the capability of our architecture to establish social norms and reduce social conflicts within generative MASs. The positive outcomes of our human evaluation, conducted with 30 evaluators, further affirm the effectiveness of our approach. Our project can be accessed via the following link: https://github.com/sxswz213/CRSEC.}
 }
+
 @article{QI2023102874,
-title = {TBVPAKE: An efficient and provably secure verifier-based PAKE protocol for IoT applications},
-journal = {Journal of Systems Architecture},
-volume = {139},
-pages = {102874},
-year = {2023},
-issn = {1383-7621},
-doi = {https://doi.org/10.1016/j.sysarc.2023.102874},
-url = {https://www.sciencedirect.com/science/article/pii/S138376212300053X},
-author = {Mingping Qi and Zhiyao Cui and Gaowei Liang},
-keywords = {Password-authenticated key exchange, PAKE, Provably secure, IoT},
-abstract = {Password-authenticated key exchange (PAKE) is an important cryptographic primitive by which two parties are allowed to authenticate each other and establish a cryptographically strong key using a low-entropy password over an insecure channel. Therefore, it is suitable for access control and securing communications between low-cost Internet of Things (IoT) devices where sound security mechanism is difficult to be applied. This paper makes a contribution to securing IoT applications by presenting a secure, efficient and easy-to-implement verifier-based PAKE protocol, named as TBVPAKE (short for Two-Basis Verifier-based PAKE). It is secure against the off-line dictionary attack and server compromise attack, and supports the perfect forward secrecy. Under the widely accepted BPR security model, TBVPAKE is formally proved in this paper in the random oracle model by reducing its security to the Computational Diffie–Hellman (CDH) and Simultaneous Diffie–Hellman (SDH) security assumptions. In addition, we compare the new TBVPAKE with some other outstanding verifier-based PAKE protocols by instantiating them over a commonly used elliptic curve group, and the comparative analysis results definitely show that the new TBVPAKE offers better computational efficiency and ease of implementation. Therefore, the new TBVPAKE might be a better choice for securing IoT applications.}
+  title    = {TBVPAKE: An efficient and provably secure verifier-based PAKE protocol for IoT applications},
+  journal  = {Journal of Systems Architecture},
+  volume   = {139},
+  pages    = {102874},
+  year     = {2023},
+  issn     = {1383-7621},
+  doi      = {https://doi.org/10.1016/j.sysarc.2023.102874},
+  url      = {https://www.sciencedirect.com/science/article/pii/S138376212300053X},
+  author   = {Mingping Qi and Zhiyao Cui and Gaowei Liang},
+  image    = {tbvpake.png},
+  keywords = {Password-authenticated key exchange, PAKE, Provably secure, IoT},
+  abstract = {Password-authenticated key exchange (PAKE) is an important cryptographic primitive by which two parties are allowed to authenticate each other and establish a cryptographically strong key using a low-entropy password over an insecure channel. Therefore, it is suitable for access control and securing communications between low-cost Internet of Things (IoT) devices where sound security mechanism is difficult to be applied. This paper makes a contribution to securing IoT applications by presenting a secure, efficient and easy-to-implement verifier-based PAKE protocol, named as TBVPAKE (short for Two-Basis Verifier-based PAKE). It is secure against the off-line dictionary attack and server compromise attack, and supports the perfect forward secrecy. Under the widely accepted BPR security model, TBVPAKE is formally proved in this paper in the random oracle model by reducing its security to the Computational Diffie–Hellman (CDH) and Simultaneous Diffie–Hellman (SDH) security assumptions. In addition, we compare the new TBVPAKE with some other outstanding verifier-based PAKE protocols by instantiating them over a commonly used elliptic curve group, and the comparative analysis results definitely show that the new TBVPAKE offers better computational efficiency and ease of implementation. Therefore, the new TBVPAKE might be a better choice for securing IoT applications.}
 }
 
 @unpublished{zhang2025multiagentdebateanswerquestion,
-      title={If Multi-Agent Debate is the Answer, What is the Question?}, 
-      author={Hangfan Zhang and Zhiyao Cui and Xinrun Wang and Qiaosheng Zhang and Zhen Wang and Dinghao Wu and Shuyue Hu},
-      year={2025},
-      eprint={2502.08788},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      arxiv={https://arxiv.org/abs/2502.08788}, 
-      abstract = {Multi-agent debate (MAD) has emerged as a promising approach to enhance the factual accuracy and reasoning quality of large language models (LLMs) by engaging multiple agents in iterative discussions during inference. Despite its potential, we argue that current MAD research suffers from critical shortcomings in evaluation practices, including limited dataset overlap and inconsistent baselines, raising significant concerns about generalizability. Correspondingly, this paper presents a systematic evaluation of five representative MAD methods across nine benchmarks using four foundational models. Surprisingly, our findings reveal that MAD methods fail to reliably outperform simple single-agent baselines such as Chain-of-Thought and Self-Consistency, even when consuming additional inference-time computation. From our analysis, we found that model heterogeneity can significantly improve MAD frameworks. We propose Heter-MAD enabling a single LLM agent to access the output from heterogeneous foundation models, which boosts the performance of current MAD frameworks. Finally, we outline potential directions for advancing MAD, aiming to spark a broader conversation and inspire future work in this area.}
+  title          = {If Multi-Agent Debate is the Answer, What is the Question?},
+  author         = {Hangfan Zhang and Zhiyao Cui and Xinrun Wang and Qiaosheng Zhang and Zhen Wang and Dinghao Wu and Shuyue Hu},
+  year           = {2025},
+  eprint         = {2502.08788},
+  archivePrefix  = {arXiv},
+  primaryClass   = {cs.CL},
+  arxiv          = {https://arxiv.org/abs/2502.08788},
+  image          = {mad.png},
+  abstract       = {Multi-agent debate (MAD) has emerged as a promising approach to enhance the factual accuracy and reasoning quality of large language models (LLMs) by engaging multiple agents in iterative discussions during inference. Despite its potential, we argue that current MAD research suffers from critical shortcomings in evaluation practices, including limited dataset overlap and inconsistent baselines, raising significant concerns about generalizability. Correspondingly, this paper presents a systematic evaluation of five representative MAD methods across nine benchmarks using four foundational models. Surprisingly, our findings reveal that MAD methods fail to reliably outperform simple single-agent baselines such as Chain-of-Thought and Self-Consistency, even when consuming additional inference-time computation. From our analysis, we found that model heterogeneity can significantly improve MAD frameworks. We propose Heter-MAD enabling a single LLM agent to access the output from heterogeneous foundation models, which boosts the performance of current MAD frameworks. Finally, we outline potential directions for advancing MAD, aiming to spark a broader conversation and inspire future work in this area.}
 }
+
 @unpublished{wang2025perpilotpersonalizingvlmbasedmobile,
-      title={PerPilot: Personalizing VLM-based Mobile Agents via Memory and Exploration}, 
-      author={Xin Wang and Zhiyao Cui and Hao Li and Ya Zeng and Chenxu Wang and Ruiqi Song and Yihang Chen and Kun Shao and Qiaosheng Zhang and Jinzhuo Liu and Siyue Ren and Shuyue Hu and Zhen Wang},
-      year={2025},
-      eprint={2508.18040},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      arxiv={https://arxiv.org/abs/2508.18040}, 
-      abstract = {Vision language model (VLM)-based mobile agents show great potential for assisting users in performing instruction-driven tasks. However, these agents typically struggle with personalized instructions -- those containing ambiguous, user-specific context -- a challenge that has been largely overlooked in previous research. In this paper, we define personalized instructions and introduce PerInstruct, a novel human-annotated dataset covering diverse personalized instructions across various mobile scenarios. Furthermore, given the limited personalization capabilities of existing mobile agents, we propose PerPilot, a plug-and-play framework powered by large language models (LLMs) that enables mobile agents to autonomously perceive, understand, and execute personalized user instructions. PerPilot identifies personalized elements and autonomously completes instructions via two complementary approaches: memory-based retrieval and reasoning-based exploration. Experimental results demonstrate that PerPilot effectively handles personalized tasks with minimal user intervention and progressively improves its performance with continued use, underscoring the importance of personalization-aware reasoning for next-generation mobile agents.}
+  title         = {PerPilot: Personalizing VLM-based Mobile Agents via Memory and Exploration},
+  author        = {Xin Wang and Zhiyao Cui and Hao Li and Ya Zeng and Chenxu Wang and Ruiqi Song and Yihang Chen and Kun Shao and Qiaosheng Zhang and Jinzhuo Liu and Siyue Ren and Shuyue Hu and Zhen Wang},
+  year          = {2025},
+  eprint        = {2508.18040},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv         = {https://arxiv.org/abs/2508.18040},
+  image         = {perpilot.png},
+  abstract      = {Vision language model (VLM)-based mobile agents show great potential for assisting users in performing instruction-driven tasks. However, these agents typically struggle with personalized instructions -- those containing ambiguous, user-specific context -- a challenge that has been largely overlooked in previous research. In this paper, we define personalized instructions and introduce PerInstruct, a novel human-annotated dataset covering diverse personalized instructions across various mobile scenarios. Furthermore, given the limited personalization capabilities of existing mobile agents, we propose PerPilot, a plug-and-play framework powered by large language models (LLMs) that enables mobile agents to autonomously perceive, understand, and execute personalized user instructions. PerPilot identifies personalized elements and autonomously completes instructions via two complementary approaches: memory-based retrieval and reasoning-based exploration. Experimental results demonstrate that PerPilot effectively handles personalized tasks with minimal user intervention and progressively improves its performance with continued use, underscoring the importance of personalization-aware reasoning for next-generation mobile agents.}
 }
 
 @inproceedings{cui2026design,
@@ -54,5 +60,6 @@ abstract = {Password-authenticated key exchange (PAKE) is an important cryptogra
   author    = {Cui, Zhiyao and Wang, Chenxu and Hu, Shuyue and Zhang, Yiqun and
                Shao, Wenqi and Zhang, Qiaosheng and Wang, Zhen},
   booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
-  year      = {2026}
+  year      = {2026},
+  image     = {designfirst.png}
 }
