@@ -190,6 +190,183 @@ ol.bibliography li { padding: 0; margin: 0; }
     
     
     
+      <div class="pub-img-placeholder">No image</div>
+    
+  </div>
+
+  <div class="pub-body">
+    <div class="pub-title">
+      
+        <a href="https://arxiv.org/abs/2606.30616" target="_blank">Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</a>
+      
+      
+        <span class="pub-badge badge-preprint">Preprint</span>
+      
+    </div>
+
+    <div class="pub-authors">Bai, Lei and Cao, Zongsheng and Chen, Yang and Cui, Zhiyao and Du, Shangheng and Fan, Yue and Feng, Shiyang and Guo, Zijie and He, Haonan and He, Liang and He, Xiaohan and Hu, Shuyue and Hu, Yusong and Huang, Songtao and Jiang, Yichen and Li, Hao and Li, Xin and Lin, Dahua and Lin, Weihao and Ling, Fenghua and Liu, Dongrui and Liu, Zhuo and Ma, Runmin and Mu, Chunjiang and Peng, Haoyang and Peng, Tianshuo and Shi, Jinxin and Shi, Luohe and Sun, Boyuan and Tan, Zelin and Tang, Shengji and Wang, Qianyi and Wu, Yiming and Xie, Yi and Yan, Xiangchao and Ye, Jingqi and Ye, Peng and Yu, Fangchen and Yuan, Jiakang and Zhan, Bihao and Zhang, Bo and Zhang, Chen and Zhang, Shufei and Zhang, Shuaiyu and Zhang, Wenlong and Zhang, Yiqun and Zhao, Junpeng and Zhong, Zhijie and Zhou, Bowen and Zhou, Yuhao</div>
+
+    <div class="pub-venue">
+      
+      
+      2026
+    </div>
+
+    <div>
+      
+      
+      
+      
+        <a href="https://arxiv.org/abs/2606.30616" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
+      
+      
+      <button class="pub-btn btn-bib" onclick="toggleBibbai2026scalinghorizonnotparameters()">BIB</button>
+      
+        <button class="pub-btn btn-abs" onclick="toggleAbsbai2026scalinghorizonnotparameters()">Abstract</button>
+      
+    </div>
+
+    <div id="bib-bai2026scalinghorizonnotparameters" class="collapse-box">@unpublished{bai2026scalinghorizonnotparameters,
+  title = {Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent},
+  author = {Bai, Lei and Cao, Zongsheng and Chen, Yang and Cui, Zhiyao and Du, Shangheng and Fan, Yue and Feng, Shiyang and Guo, Zijie and He, Haonan and He, Liang and He, Xiaohan and Hu, Shuyue and Hu, Yusong and Huang, Songtao and Jiang, Yichen and Li, Hao and Li, Xin and Lin, Dahua and Lin, Weihao and Ling, Fenghua and Liu, Dongrui and Liu, Zhuo and Ma, Runmin and Mu, Chunjiang and Peng, Haoyang and Peng, Tianshuo and Shi, Jinxin and Shi, Luohe and Sun, Boyuan and Tan, Zelin and Tang, Shengji and Wang, Qianyi and Wu, Yiming and Xie, Yi and Yan, Xiangchao and Ye, Jingqi and Ye, Peng and Yu, Fangchen and Yuan, Jiakang and Zhan, Bihao and Zhang, Bo and Zhang, Chen and Zhang, Shufei and Zhang, Shuaiyu and Zhang, Wenlong and Zhang, Yiqun and Zhao, Junpeng and Zhong, Zhijie and Zhou, Bowen and Zhou, Yuhao},
+  year = {2026},
+  eprint = {2606.30616},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.CL},
+  arxiv = {https://arxiv.org/abs/2606.30616}
+}
+</div>
+    
+      <div id="abs-bai2026scalinghorizonnotparameters" class="collapse-box">We introduce Agents-A1, a 35B Mixture-of-Experts Agentic Model that reaches trillion-parameter-level performance by scaling the agent horizon. We investigate agent-horizon scaling from two perspectives: scaling long-horizon trajectories and scaling heterogeneous agent abilities. To support this goal, we build a long-horizon knowledge-action infrastructure that connects external knowledge, actions, observations, and verifier outcomes, producing agentic trajectories with an average length of 45K tokens. Based on this, we train Agents-A1 with a three-stage recipe. First, we perform full-domain supervised fine-tuning to align the base model with broad agentic behaviors. Second, we train domain-level teacher models to capture specialized expertise in each domain. Third, we propose a multi-teacher domain-routed on-policy distillation with salient vocabulary alignment to improve knowledge transfer efficiency across different domains, unifying six heterogeneous domains into one deployable student model. Agents-A1 achieves strong and broad performance for long-horizon agent benchmarks. Compared with 1T-parameter model such as Kimi-K2.6 and DeepSeek-V4-pro, Agents-A1 achieves leading results on SEAL-0 (56.4), IFBench (80.6), HiPhO (46.4), FrontierScience-Olympiad (79.0), and MolBench-Bind (56.8), and remains highly competitive on SciCode (44.3), HLE (47.6) and BrowseComp (75.5). We hope this work provides the community with a practical path for scaling the horizon using a 35B agent that can reach or match the performance of 1T models on long-horizon tasks.</div>
+    
+  </div>
+</div>
+
+<script>
+function toggleBibbai2026scalinghorizonnotparameters() {
+  var x = document.getElementById('bib-bai2026scalinghorizonnotparameters');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
+}
+function toggleAbsbai2026scalinghorizonnotparameters() {
+  var x = document.getElementById('abs-bai2026scalinghorizonnotparameters');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+</li>
+<li><style>
+ol.bibliography { list-style: none; padding: 0; margin: 0; }
+ol.bibliography li { padding: 0; margin: 0; }
+
+.pub-card {
+  display: flex;
+  gap: 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+.pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
+
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
+.pub-title {
+  font-size: 1.02em;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.pub-title a { color: #1a1a2e; text-decoration: none; }
+.pub-title a:hover { color: #0077cc; text-decoration: underline; }
+
+.pub-badge {
+  display: inline-block;
+  font-size: 0.68em;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-preprint  { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+.badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+.badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
+
+.pub-btn {
+  display: inline-block;
+  font-size: 0.73em;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.btn-arxiv { background: #b31b1b; color: #fff; }
+.btn-doi   { background: #4a90d9; color: #fff; }
+.btn-pdf   { background: #28a745; color: #fff; }
+.btn-bib   { background: #dc3545; color: #fff; }
+.btn-abs   { background: #e8a020; color: #fff; }
+.pub-btn:hover { opacity: 0.85; }
+
+.collapse-box {
+  display: none;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 0.82em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
+</style>
+
+<div class="pub-card">
+  <div class="pub-img-wrap">
+    
+    
+    
       <img src="https://sxswz213.github.io/images/papers/designfirst.png" alt="Design First, Code Later: Aesthetically Pleasing Template-Free Slides Generation" />
     
   </div>
