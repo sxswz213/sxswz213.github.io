@@ -6,6 +6,7 @@
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
   arxiv         = {https://arxiv.org/abs/2606.30616},
+  image         = {agenta1.png},
   abstract      = {We introduce Agents-A1, a 35B Mixture-of-Experts Agentic Model that reaches trillion-parameter-level performance by scaling the agent horizon. We investigate agent-horizon scaling from two perspectives: scaling long-horizon trajectories and scaling heterogeneous agent abilities. To support this goal, we build a long-horizon knowledge-action infrastructure that connects external knowledge, actions, observations, and verifier outcomes, producing agentic trajectories with an average length of 45K tokens. Based on this, we train Agents-A1 with a three-stage recipe. First, we perform full-domain supervised fine-tuning to align the base model with broad agentic behaviors. Second, we train domain-level teacher models to capture specialized expertise in each domain. Third, we propose a multi-teacher domain-routed on-policy distillation with salient vocabulary alignment to improve knowledge transfer efficiency across different domains, unifying six heterogeneous domains into one deployable student model. Agents-A1 achieves strong and broad performance for long-horizon agent benchmarks. Compared with 1T-parameter model such as Kimi-K2.6 and DeepSeek-V4-pro, Agents-A1 achieves leading results on SEAL-0 (56.4), IFBench (80.6), HiPhO (46.4), FrontierScience-Olympiad (79.0), and MolBench-Bind (56.8), and remains highly competitive on SciCode (44.3), HLE (47.6) and BrowseComp (75.5). We hope this work provides the community with a practical path for scaling the horizon using a 35B agent that can reach or match the performance of 1T models on long-horizon tasks.}
 }
 
@@ -24,6 +25,9 @@
   url       = {https://doi.org/10.24963/ijcai.2024/874},
   arxiv     = {https://arxiv.org/abs/2403.08251},
   image     = {crsec.png},
+  github    = {https://github.com/sxswz213/CRSEC},
+  demo      = {https://www.bilibili.com/video/BV1A142187EE},
+  keywords  = {main},
   abstract  = {Social norms play a crucial role in guiding agents towards understanding and adhering to standards of behavior, thus reducing social conflicts within multi-agent systems (MASs). However, current LLM-based (or generative) MASs lack the capability to be normative. In this paper, we propose a novel architecture, named CRSEC, to empower the emergence of social norms within generative MASs. Our architecture consists of four modules: Creation & Representation, Spreading, Evaluation, and Compliance. This addresses several important aspects of the emergent processes all in one: (i) where social norms come from, (ii) how they are formally represented, (iii) how they spread through agents' communications and observations, (iv) how they are examined with a sanity check and synthesized in the long term, and (v) how they are incorporated into agents' planning and actions. Our experiments deployed in the Smallville sandbox game environment demonstrate the capability of our architecture to establish social norms and reduce social conflicts within generative MASs. The positive outcomes of our human evaluation, conducted with 30 evaluators, further affirm the effectiveness of our approach. Our project can be accessed via the following link: https://github.com/sxswz213/CRSEC.}
 }
 
@@ -43,9 +47,10 @@
 }
 
 @unpublished{zhang2025multiagentdebateanswerquestion,
-  title          = {If Multi-Agent Debate is the Answer, What is the Question?},
-  author         = {Hangfan Zhang and Zhiyao Cui and Xinrun Wang and Qiaosheng Zhang and Zhen Wang and Dinghao Wu and Shuyue Hu},
+  title          = {Stop Overvaluing Multi-Agent Debate--We Must Rethink Evaluation and Embrace Model Heterogeneity},
+  author         = {Hangfan Zhang and Zhiyao Cui and Jianhao Chen and Xinrun Wang and Qiaosheng Zhang and Zhen Wang and Dinghao Wu and Shuyue Hu},
   year           = {2025},
+  month          = {2},
   eprint         = {2502.08788},
   archivePrefix  = {arXiv},
   primaryClass   = {cs.CL},
@@ -63,6 +68,8 @@
   primaryClass  = {cs.AI},
   arxiv         = {https://arxiv.org/abs/2508.18040},
   image         = {perpilot.png},
+  keywords      = {main},
+  github        = {https://github.com/xinwang-nwpu/PerPilot},
   abstract      = {Vision language model (VLM)-based mobile agents show great potential for assisting users in performing instruction-driven tasks. However, these agents typically struggle with personalized instructions -- those containing ambiguous, user-specific context -- a challenge that has been largely overlooked in previous research. In this paper, we define personalized instructions and introduce PerInstruct, a novel human-annotated dataset covering diverse personalized instructions across various mobile scenarios. Furthermore, given the limited personalization capabilities of existing mobile agents, we propose PerPilot, a plug-and-play framework powered by large language models (LLMs) that enables mobile agents to autonomously perceive, understand, and execute personalized user instructions. PerPilot identifies personalized elements and autonomously completes instructions via two complementary approaches: memory-based retrieval and reasoning-based exploration. Experimental results demonstrate that PerPilot effectively handles personalized tasks with minimal user intervention and progressively improves its performance with continued use, underscoring the importance of personalization-aware reasoning for next-generation mobile agents.}
 }
 
@@ -72,8 +79,11 @@
                Shao, Wenqi and Zhang, Qiaosheng and Wang, Zhen},
   booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
   year      = {2026},
+  keywords  = {main},
   arxiv     = {https://arxiv.org/abs/2605.26451},
-  image     = {designfirst.png}
+  image     = {designfirst.png},
+  github    = {https://github.com/sxswz213/DeepSlides},
+  abstract  = {Producing presentation slides automatically entails coordinating narrative structure with page-level graphic design under strict spatial constraints. For such structured multimodal tasks, a well-organized design process is essential to ensure the final quality of slides. Existing approaches rely on fixed templates or directly emit executable code, thereby both limiting the creative layout-design capabilities of LLMs and bypassing the essential slide-page design step. To address these limitations, this paper: (1) proposes a hierarchical slides generation workflow DeepSlides that systematically organizes slide design tasks without any predefined template or style, decoupling slide-page design from implementation; (2) introduces SlideDesign, a dataset tailored specifically for slides generation tasks; (3) presents a multi-agent reinforcement learning training paradigm and trains a couple of models SlideQwens for slide design and implementation. Experimental results demonstrate that our proposed framework outperforms baseline methods on evaluated metrics and achieves superior performance in human preference evaluations.}
 }
 
 @unpublished{cui2026agentpanel,
@@ -84,6 +94,10 @@
   archivePrefix = {arXiv},
   primaryClass  = {cs.AI},
   arxiv         = {https://arxiv.org/abs/2608.03283},
+  image         = {agentpanel.png},
+  link          = {https://agentpanel.cc/},
+  github        = {https://github.com/InternScience/AgentPanel},
+  keywords      = {main},
   abstract      = {Identifying promising scientific ideas remains an important challenge in research practice. Researchers commonly rely on small-group discussions or one-to-one interactions with a single large language model, yet these approaches often expose them to only a limited range of perspectives and directions. We present AgentPanel, a multi-agent forum for human--AI collaboration in scientific exploration. Heterogeneous agents asynchronously discuss scientific questions in a forum-style environment, while researchers can submit questions, browse and organize candidate ideas, engage agents in follow-up interactions, and optionally generate post-hoc summary reports. We evaluate AgentPanel in terms of idea quality, exploration breadth, interaction effectiveness, candidate-selection efficiency, and practical utility. Offline experiments show that AgentPanel outperforms a centralized multi-agent debate baseline. A human study with 20 participants further shows that users value AgentPanel for perspective diversity and exploration support. In experience-based comparisons with commonly used LLM tools, 65\% of participants favored AgentPanel for both breadth of research directions and overall suitability for early-stage exploration. The platform is publicly available at https://agentpanel.cc/.}
 }
 
@@ -95,5 +109,32 @@
   archivePrefix = {arXiv},
   primaryClass  = {cs.AI},
   arxiv         = {https://arxiv.org/abs/2608.02287},
+  image         = {skt.png},
   abstract      = {Agent skills have become an important mechanism for equipping language-model agents with reusable procedural knowledge. However, providing skills alone does not guarantee that current models can effectively identify, apply, and coordinate them. To improve skill-use capabilities, we introduce SKT, a verified data synthesis pipeline that constructs skill-grounded tasks and executable trajectories from large collections of agent skills. SKT selects suitable single-skill and multi-skill configurations, synthesizes tasks through rule-based and agent-based verification with feedback-guided repair, and retains only successful trajectories that substantially use every required skill. Using 2,000 public skills, SKT produces 4,000 task packages and 27,164 verified trajectories. Based on the same pipeline and a disjoint test pool, we further construct SkillEval, a held-out executable benchmark for evaluating skill use. Experiments across diverse models, benchmarks, and agent harnesses show that supervised fine-tuning on SKT-generated trajectories consistently improves skill-use performance. Verification ablations, cross-harness evaluation, and scaling experiments further demonstrate that these gains depend on high-quality supervision, extend beyond a single agent interface, and increase with broader skill coverage. Together, these results establish verified data synthesis as an effective and scalable approach for skill-use training.}
+}
+
+@unpublished{li2026organizing,
+  title         = {Organizing, Orchestrating, and Benchmarking Agent Skills at Ecosystem Scale},
+  author        = {Hao Li and Chunjiang Mu and Jianhao Chen and Siyue Ren and Zhiyao Cui and Yiqun Zhang and Lei Bai and Shuyue Hu},
+  year          = {2026},
+  month         = {3},
+  eprint        = {2603.02176},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv         = {https://arxiv.org/abs/2603.02176},
+  image         = {agentskillos.png}
+}
+
+@misc{hu2025handson,
+  title     = {Hands-on LLM-based Agents: A Tutorial for General Audiences},
+  author    = {Shuyue Hu and Siyue Ren and Yang Chen and Chunjiang Mu and Jinyi Liu and Zhiyao Cui and Yiqun Zhang and Hao Li and Dongzhan Zhou and Jia Xu and Qiaosheng Zhang and Chu Han and Yan Zheng and Jianye Hao and Zhen Wang},
+  year      = {2025},
+  month     = {11},
+  volume    = {2025},
+  number    = {1121},
+  publisher = {TechRxiv},
+  doi       = {10.36227/techrxiv.176369788.84013646/v1},
+  url       = {https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176369788.84013646/v1},
+  image     = {tutorial.png},
+  link      = {https://llm-agent-tutorial.github.io/website/index.html}
 }

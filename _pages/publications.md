@@ -7,4 +7,8 @@ permalink: /publications/
 
 ## Publications
 
-{% bibliography %}
+{% bibliography --query @*[keywords ^= main] %}
+
+### Other Works
+
+{% bibliography --query @*[keywords != main] %}

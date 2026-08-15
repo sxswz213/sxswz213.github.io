@@ -1,6 +1,5 @@
-<div>
+<div class="sidebar-profile">
 {% for member in site.data.pi %}
-<div class="jumbotron">
    <center>
    <a href="{{site.url}}{{site.baseurl}}/about"><img src="{{site.url}}{{site.baseurl}}/images/{{ member.photo }}" width="60%" style="block:inline; margin-left:auto; margin-right:auto; margin-bottom:5px;"/></a>
    <h4>{{ member.name }}</h4>
@@ -18,13 +17,11 @@
       <li>{{ education | replace: "-","&#8211;" }}</li>
     {% endfor %}
   </ul>
-
-</div>
 {% endfor %}
 </div>
 
 <div class="jumbotron">
-  <h4>News</h4>
+  <h4><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">News</a></h4>
 
   {% for article in site.data.news limit:3 %}
   <b>{{ article.date }}</b>

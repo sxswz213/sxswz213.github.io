@@ -28,7 +28,12 @@ contact: >
 # Pages shown in navbar
 nav_pages:
   - name: about
+  - name: News
+    url: allnews.html
   - name: publications
+  - name: activities
+    url: services
+    label: Activities
 #  - name: talks
 # - name: research
 #  - name: software

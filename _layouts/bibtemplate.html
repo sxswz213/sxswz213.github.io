@@ -85,9 +85,12 @@ ol.bibliography li { padding: 0; margin: 0; }
 }
 .btn-arxiv { background: #b31b1b; color: #fff; }
 .btn-doi   { background: #4a90d9; color: #fff; }
+.btn-link  { background: #6c757d; color: #fff; }
 .btn-pdf   { background: #28a745; color: #fff; }
 .btn-bib   { background: #dc3545; color: #fff; }
 .btn-abs   { background: #e8a020; color: #fff; }
+.btn-github{ background: #0f5132; color: #fff; }
+.btn-demo  { background: #00a1d6; color: #fff; }
 .pub-btn:hover { opacity: 0.85; }
 
 .collapse-box {
@@ -174,6 +177,15 @@ ol.bibliography li { padding: 0; margin: 0; }
       <button class="pub-btn btn-bib" onclick="toggleBib{{entry.key}}()">BIB</button>
       {% if entry.abstract %}
         <button class="pub-btn btn-abs" onclick="toggleAbs{{entry.key}}()">Abstract</button>
+      {% endif %}
+      {% if entry.link %}
+        <a href="{{ entry.link }}" target="_blank" class="pub-btn btn-link">Link</a>
+      {% endif %}
+      {% if entry.github %}
+        <a href="{{ entry.github }}" target="_blank" class="pub-btn btn-github">GitHub</a>
+      {% endif %}
+      {% if entry.demo %}
+        <a href="{{ entry.demo }}" target="_blank" class="pub-btn btn-demo">Demo</a>
       {% endif %}
     </div>
 

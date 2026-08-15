@@ -16,7 +16,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="navbar-nav mr-auto">
             <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
             {% for page in site.nav_pages %}       
-                <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/{{page.name}}">{{page.name | capitalize }}</a>
+                {% assign nav_url = page.url | default: page.name %}
+                {% if page.label %}
+                    {% assign nav_label = page.label %}
+                {% else %}
+                    {% assign nav_label = page.name | capitalize %}
+                {% endif %}
+                <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/{{ nav_url }}">{{ nav_label }}</a>
             {% endfor %}
         </div>
     </div>
