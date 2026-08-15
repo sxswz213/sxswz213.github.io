@@ -22452,14 +22452,84 @@ img {
   border-radius: 5%;
 }
 
+a {
+  color: #3f9f86;
+}
+
+a:hover {
+  color: #2f826d;
+}
+
 .jumbotron {
   padding: 20px;
   padding-bottom: 7px;
   margin-top: 22px;
   margin-bottom: 22px;
   font-size: medium;
-  background: linear-gradient(45deg, rgba(22, 255, 150, 0.1882352941), rgba(22, 255, 205, 0.1882352941));
-  border-color: #00bc8c;
+  color: #111;
+  background: #fff;
+  border: 1px solid #e6e8eb;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.jumbotron a {
+  color: #3f9f86;
+}
+
+.jumbotron p {
+  color: #444;
+}
+
+.jumbotron h4, .jumbotron .h4 {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.jumbotron h4 a, .jumbotron .h4 a {
+  color: #444;
+}
+
+.publication-more-link {
+  color: #3f9f86;
+  font-weight: 700;
+  font-size: 1.08rem;
+  text-decoration: underline;
+}
+
+.sidebar-profile ul {
+  color: #444;
+}
+
+.sidebar-profile h4, .sidebar-profile .h4 {
+  margin-top: 16px;
+}
+
+#homeid h3, #homeid .h3,
+#publications h2,
+#publications .h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+}
+
+#homeid h3 a, #homeid .h3 a {
+  color: #000;
+}
+
+#homeid h4, #homeid .h4,
+#publications h3,
+#publications .h3 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #000;
+}
+
+#homeid .home-services h4, #homeid .home-services .h4 {
+  color: #444;
+}
+
+#homeid .home-services li {
+  color: #000;
 }
 
 .navbar {
@@ -22473,13 +22543,13 @@ img {
 }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-  max-width: 75%;
+  max-width: 68%;
 }
 
 .container-footer {
   margin-right: auto;
   margin-left: auto;
-  max-width: 75%;
+  max-width: 68%;
   padding-left: 20px;
   padding-right: 20px;
 }
