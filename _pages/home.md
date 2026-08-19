@@ -33,7 +33,7 @@ I completed my undergraduate degree in Information Security at Northwestern Poly
 
 👯Beyond academics, I hold a black belt in Taekwondo and have achieved the highest level in electronic keyboard. Whether in research or personal life, I enjoy challenges and believe in bringing curiosity and enthusiasm to everything I do.
 
-📫Feel free to connect—I’m always excited to discuss innovative ideas or collaborate on cutting-edge research! For further details, please refer to my **[resume](/cv/cv.pdf)**.
+📫Feel free to connect—I’m always excited to discuss innovative ideas or collaborate on cutting-edge research!
 
 </div>
 
