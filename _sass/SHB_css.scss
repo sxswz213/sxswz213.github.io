@@ -159,3 +159,142 @@ a:hover {
 .MathJax_ref {
   fill: #00bc8c!important;
 }
+
+/* Project entries follow the same visual structure as publication cards. */
+.proj-card {
+  display: flex;
+  gap: 18px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s;
+}
+
+.proj-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.13);
+}
+
+.proj-img-wrap {
+  display: flex;
+  flex: 0 0 160px;
+  align-items: flex-start;
+}
+
+.proj-img-wrap img,
+.proj-img-placeholder {
+  width: 160px;
+  height: 110px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.proj-img-wrap img {
+  object-fit: cover;
+  object-position: top left;
+}
+
+.proj-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #386e9f, #62b5a1);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.proj-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.proj-title {
+  margin-bottom: 6px;
+  font-size: 1.02em;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.proj-title a {
+  color: #1a1a2e;
+  text-decoration: none;
+}
+
+.proj-title a:hover {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.proj-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  margin-left: 7px;
+  color: #0c5460;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  border-radius: 4px;
+  font-size: 0.68em;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.proj-role {
+  margin-bottom: 4px;
+  color: #888;
+  font-size: 0.83em;
+  font-style: italic;
+}
+
+.proj-body p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 0.87em;
+  line-height: 1.55;
+}
+
+.proj-card .pub-btn {
+  display: inline-block;
+  padding: 3px 11px;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 0.73em;
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.proj-card .btn-demo {
+  background: #00a1d6;
+}
+
+.proj-card .btn-github {
+  background: #0f5132;
+}
+
+.proj-card .pub-btn:hover {
+  color: #fff;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .proj-card {
+    flex-direction: column;
+  }
+
+  .proj-img-wrap {
+    flex: none;
+  }
+
+  .proj-img-wrap img,
+  .proj-img-placeholder {
+    width: 100%;
+    height: 140px;
+  }
+}

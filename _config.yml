@@ -28,6 +28,8 @@ contact: >
 # Pages shown in navbar
 nav_pages:
   - name: about
+  - name: projects
+    label: Projects
   - name: News
     url: allnews.html
   - name: publications
