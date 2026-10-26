@@ -1,3 +1,15 @@
+@unpublished{li2026rsirouter,
+  title         = {RSI-Router: Evolving Subtask-Level LLM Routing and Skills for Cost-Efficient Agents},
+  author        = {Hao Li and Hangfan Zhang and Zhiyao Cui and Chunjiang Mu and Yiqun Zhang and Bo Zhang and Danyang Jia and Shuyue Hu},
+  year          = {2026},
+  month         = {9},
+  eprint        = {2609.34712},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv         = {https://arxiv.org/abs/2609.34712},
+  abstract      = {Practical deployment of large language model (LLM) agents requires strong task performance at affordable inference cost. For long-horizon agentic tasks, this performance-cost trade-off can be improved through within-task large-small model collaboration, as smaller models can handle some stages even when they cannot solve the full task. In this paper, we introduce RSI-router, a routing framework that constructs subtask-level model assignments and model-specific skills through recursive self-improvement over accumulated experience. Each iteration consists of four stages: Subtask Mining derives subtask definitions and identification rules from training trajectories; Routing Strategy Evolution proposes and evaluates diverse model assignments; Model-Specific Skill Evolution compares routed and large-model-only trajectories to diagnose failures and develop reusable execution skills; and Pareto-Optimal Router Selection updates the Pareto population using historical and newly generated routers while retaining dominated routers as experience for subsequent evolution. Routing between DeepSeek-V4.1-Flash and Qwen3.5-9B, RSI-router consistently surpasses the DeepSeek-only baseline at roughly half the inference cost (48.3%) across five agentic benchmarks. In particular, on ALFWorld, ScienceWorld, and WebShop, it cuts inference cost by 74.7-82.2% while simultaneously improving performance; on Terminal-Bench 2.0, it achieves a 16.7% relative performance gain at 18.0% lower cost. Moreover, RSI-router establishes a stronger performance--cost Pareto frontier than 9 routing methods.}
+}
+
 @unpublished{bai2026scalinghorizonnotparameters,
   title         = {Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent},
   author        = {Lei Bai and Zongsheng Cao and Yang Chen and Zhiyao Cui and Shangheng Du and Yue Fan and Shiyang Feng and Zijie Guo and Haonan He and Liang He and Xiaohan He and Shuyue Hu and Yusong Hu and Songtao Huang and Yichen Jiang and Hao Li and Xin Li and Dahua Lin and Weihao Lin and Fenghua Ling and Dongrui Liu and Zhuo Liu and Runmin Ma and Chunjiang Mu and Haoyang Peng and Tianshuo Peng and Jinxin Shi and Luohe Shi and Boyuan Sun and Zelin Tan and Shengji Tang and Qianyi Wang and Yiming Wu and Yi Xie and Xiangchao Yan and Jingqi Ye and Peng Ye and Fangchen Yu and Jiakang Yuan and Bihao Zhan and Bo Zhang and Chen Zhang and Shufei Zhang and Shuaiyu Zhang and Wenlong Zhang and Yiqun Zhang and Junpeng Zhao and Zhijie Zhong and Bowen Zhou and Yuhao Zhou},
@@ -87,10 +99,11 @@
 }
 
 @inproceedings{cui2026agentpanel,
-  title         = {AgentPanel: Toward a New Paradigm for Human--AI Collaboration in Exploring Scientific Questions},
-  author        = {Zhiyao Cui and Qianyi Wang and Haoyang Yan and Yiqun Zhang and Siyue Ren and Hangfan Zhang and Zelin Tan and Hao Li and Chunjiang Mu and Dexian Cai and Shao Zhang and Chen Zhang and Meng Li and Jianan Chai and Yuting Fan and Zichao Ye and Xiaolei Yang and Xinyao Lu and Yuyang Yu and Wenjie Lou and Xiaosong Wang and Fenghua Ling and Shiyang Feng and Mao Su and Qiaosheng Zhang and Bo Zhang and Yang Chen and Lei Bai and Shuyue Hu},
-  booktitle     = {DAI 2026 (Industry Track)},
+  title         = {AgentPanel: Toward a New Paradigm for Human{\textendash}{AI} Collaboration in Exploring Scientific Questions},
+  author        = {Zhiyao Cui and Qianyi Wang and Haoyang Yan and Yiqun Zhang and Siyue Ren and Hangfan Zhang and Zelin Tan and Hao Li and Chunjiang Mu and Dexian Cai and Shao Zhang and Chen Zhang and Meng Li and Jianan Chai and Fan Yuting and Zichao Ye and Xiaolei Yang and XINYAO LU and Yuyang Yu and Wenjie Lou and Xiaosong Wang and Fenghua Ling and Shiyang Feng and Mao Su and Qiaosheng Zhang and Bo Zhang and LEI BAI and Yang Chen and Shuyue Hu},
+  booktitle     = {The 8th International Conference on Distributed Artificial Intelligence},
   year          = {2026},
+  url           = {https://openreview.net/forum?id=6l8mQ9iw2B},
   eprint        = {2608.03283},
   archivePrefix = {arXiv},
   primaryClass  = {cs.AI},
