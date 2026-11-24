@@ -150,9 +150,6 @@ ol.bibliography li { padding: 0; margin: 0; }
     </div>
 
     <div class="pub-authors">{{ entry.author }}</div>
-    {% if entry.contribution %}
-      <div class="pub-authors"><strong>{{ entry.contribution }}</strong></div>
-    {% endif %}
 
     <div class="pub-venue">
       {% if entry.booktitle %}{{ entry.booktitle }}{% endif %}
